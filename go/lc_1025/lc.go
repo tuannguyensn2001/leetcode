@@ -1,17 +1,12 @@
 package lc_1025
 
+//xet A va B doi dau voi nhau, nhan thay neu ai co so 2 truoc nguoi do se thang
+//muon thang thi nguoi di dau tien phai cam duoc so chan, sau do se day so le cho nguoi con lai
+// nguoi cam so le se luon phai dua lai so chan, vi uoc cua le = le, le - le = chan
+// co so chan chac chan se thang
+
 func divisorGame(n int) bool {
-	a := getDivide(n)
-
-	for _, item := range a {
-		b := n - item
-		if !handle(b, 1) {
-			return false
-		}
-	}
-
-	return true
-
+	return n%2 == 0
 }
 
 func handle(n int, turn int) bool {
